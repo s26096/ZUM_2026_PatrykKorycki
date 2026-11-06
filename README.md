@@ -130,17 +130,17 @@ Znane ograniczenia: Zbiór jest silnie niezbalansowany, z dużą nadreprezentacj
 
 ## Protokół (Zadanie 1)
 
-* Jednostka generalizacji: [na przykład recenzja, pacjent, mówca, nagranie źródłowe]
-* Podział: [metoda i uzasadnienie]
-* Metryka główna i pomocnicze: [z uzasadnieniem]
-* Seed: [wartość]
+* Jednostka generalizacji: pacjent (Patient ID). Oboje oczu jednego pacjenta zawsze trafiają do tego samego zbioru. Pacjenci mający identyczne zdjęcie (ten sam MD5) są scaleni w jedną grupę.
+* Podział: grupowy i stratyfikowany (StratifiedGroupKFold, scikit-learn), wykonany dwukrotnie: n_splits=7 odcina test (ok. 14%), potem n_splits=6 na reszcie odcina validation (ok. 14%), reszta to train (ok. 72%). Grupowy, bo model ma generalizować na nowych pacjentów, a zdjęcia jednego pacjenta nie mogą być jednocześnie w treningu i teście. Stratyfikowany, bo klasy są niezbalansowane.
+* Metryka główna i pomocnicze: Główna to F1-macro, bo klasy są nierówne, a każda choroba jest tak samo ważna (accuracy premiowałaby klasę dominującą). Pomocnicze: precision, recall i F1 per klasa, balanced accuracy, macierz pomyłek.
+* Seed: 42
 * Final test: zamrożony w commicie z tagiem `task-1`, identyfikatory w `splits/`. Jeśli podział był później poprawiany, podaj commit poprawionej wersji i opisz zmianę w dzienniku zmian.
 
 | Zbiór | Liczba przykładów | Liczba niezależnych jednostek |
 |---|---|---|
-| train | | |
-| validation | | |
-| final test | | |
+| train |3363 zdjęć |1961 pacjentów |
+| validation | 672 zdjęć| 392 pacjentów|
+| final test | 653 zdjęć|392 pacjentów |
 
 ## Wyniki (Zadania 2 do 5)
 
