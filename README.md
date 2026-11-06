@@ -112,16 +112,20 @@ Czy zastosowanie transfer learningu pozwoli osiągnąć istotnie wyższą sprawn
 
 ## Dane i licencja (Zadanie 1)
 
-[Źródło i link, licencja, sposób pobrania, liczba przykładów, lista klas, sposób oznaczenia etykiet, znane ograniczenia.]
-Źródło i link: Ocular Disease Intelligent Recognition (ODIR-5K) w wersji z platformy Kaggle: https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k
-Licenja: Dane pochodzą z konkursu ODIR-2019 (https://odir2019.grand-challenge.org/dataset/), ale nie są dostępne już na stronie do pobrania. Jako źródło uznaję kopię tych danych z figshare (https://figshare.com/articles/dataset/ODIR-5K_dataset/32157930?file=64213794) na licencji CC BY 4.0 podanej przez autora wpisu Ijad (https://figshare.com/authors/Ijad/23832012)
-Sposób pobrania: Ze względu na rozmiar obrazów medycznych oraz wymogi prywatności, surowe pliki nie są przechowywane w repozytorium GitHub. Pobierane są za pomocą Kaggle API bezpośrednio do środowiska roboczego przed uruchomieniem skryptów.
-Liczba przykładów: Po usunięciu etykiet wielokrotnych i odrzuceniu innych patologii w zbiorze pozostaje 4688 zdjęć pochodzących od 2745 unikalnych pacjentów.
+Źródło i link: Ocular Disease Intelligent Recognition (ODIR-5K) w wersji z platformy Kaggle: https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k<br>
+
+Licenja: Dane pochodzą z konkursu ODIR-2019 (https://odir2019.grand-challenge.org/dataset/), ale nie są dostępne już na stronie do pobrania. Jako źródło uznaję kopię tych danych z figshare (https://figshare.com/articles/dataset/ODIR-5K_dataset/32157930?file=64213794) na licencji CC BY 4.0 podanej przez autora wpisu Ijad (https://figshare.com/authors/Ijad/23832012)<br>
+
+Sposób pobrania: Ze względu na rozmiar obrazów medycznych oraz wymogi prywatności, surowe pliki nie są przechowywane w repozytorium GitHub. Pobierane są za pomocą Kaggle API bezpośrednio do środowiska roboczego przed uruchomieniem skryptów.<br>
+
+Liczba przykładów: Po usunięciu etykiet wielokrotnych i odrzuceniu innych patologii w zbiorze pozostaje 4688 zdjęć pochodzących od 2745 unikalnych pacjentów.<br>
+
 Lista klas i sposób oznaczenia etykiet: Etykiety przypisano na podstawie słów kluczowych diagnozy przypisanych do każdego z oczu (Left-Diagnostic Keywords / Right-Diagnostic Keywords). Odrzucono obrazy posiadające więcej niż jedną diagnozę docelową.
 - normal (brak patologii) – 2818 zdjęć
 - diabetes (retinopatia cukrzycowa) – 1389 zdjęć
 - cataract (zaćma) – 263 zdjęcia
 - glaucoma (jaskra) – 218 zdjęć
+<br>
 Znane ograniczenia: Zbiór jest silnie niezbalansowany, z dużą nadreprezentacją klasy normal. Znaczna część oryginalnego zbioru została odrzucona ze względu na występowanie innych patologii lub współistnienie wielu chorób na jednym zdjęciu, co było konieczne do sformułowania problemu jako klasyfikacji jednolabelowej.
 
 ## Protokół (Zadanie 1)
